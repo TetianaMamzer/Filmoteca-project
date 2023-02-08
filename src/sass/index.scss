@@ -1,2 +1,28 @@
 @import './common';
-@import './example';
+@import './utils/module';
+
+// base
+@import './base/base';
+@import './base/preloader';
+@import './base/container';
+@import './base/section';
+
+// layout
+@import './layout/header-home-page';
+@import './layout/header-library-page';
+@import './layout/footer-all-page';
+
+// components
+@import './components/input';
+@import './components/card';
+@import './components/backdrop';
+@import './components/modal-film';
+@import './components/pagination';
+
+@import './components/library';
+
+@import './components/modal-win-our-team';
+
+
+@import './components/library';
+@import './components/popular-gallery';

@@ -1,0 +1,118 @@
+:root {
+  --dark: #070707;
+  --white: #fff;
+  --sizeindex: calc(1vw + 1vh);
+  --transition: .75s cubic-bezier(0.2, 0.6, 0, 1);
+}
+
+.cover {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+
+  color: var(--white);
+  
+  /* overflow: hidden -- задаем определенной секции */
+  line-height: 1.8;
+  /* так можно показівать 80% от размера єкрана font-size: calc(var(--sizeindex) * .8); */
+}
+.text {
+  color: #fff;
+}
+.slider {
+  min-width: 40vw;
+  max-width: 60vw;
+  height: 100%;
+  transform: rotate(12deg);
+  overflow: visible;
+  top: 5vh;
+}
+
+.slider__wrapper {
+  transition: var(--transition);
+  will-change: transform;
+}
+
+.slider__item {
+  max-height: 60vh;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.slider__img {
+  width: 170%;
+  height: 100%;
+  transition: var(--transition);
+  will-change: transform;
+  background-size: cover;
+  position: absolute;
+  left: -40%;
+
+}
+
+.slider_bg {
+  z-index: 0;
+  transform: rotate(-12deg);
+  pointer-events: none;
+  top: -40vh;
+  left: -10vh;
+  opacity: .2;
+  filter: blur(100px) saturate(10);
+}
+
+.slider_bg .slider__item {
+  max-height: 100vh;
+}
+
+// .slider__item.opened {
+//   z-index: 2;
+//   transform: rotate(-15deg) scale(1.45);
+//   box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
+// }
+
+.description {
+position: absolute;
+font-size: calc(var(--sizeindex) * .8);
+top: 15vh;
+left: 8vw;
+max-width: 25vw;
+
+
+transition: opacity var(--transition), transform var(--transition);
+
+}
+
+.logo-wrapper {
+  font-size: calc(var(--sizeindex) * 2);
+  font-weight: 900;
+  display: inline-block;
+  background: linear-gradient(45deg, rgb(207, 2, 9), rgb(249, 100, 0), rgb(254, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--sizeindex) * 3);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: calc(var(--sizeindex) * 3.6);
+  }
+}
+
+.description p {
+  opacity: .9;
+  transition: transform var(--transition);
+  transition-duration: 3s;
+  max-width: 25vw;
+}
+.description.hidden {
+  opacity: 0;
+  transform: translateY(5vh);
+}
+
+.description.hidden p {
+  transform: translateY(2vh);
+}

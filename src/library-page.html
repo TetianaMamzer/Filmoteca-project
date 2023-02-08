@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
-    <title>Filmoteka</title>
+
+    <title>Library</title>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon-popcorn.ico" />
@@ -21,44 +21,36 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
-
-
+    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
   </head>
   <body>
 
     <!-- Header -->
+    <include src="./partials/header-library-page.html"></include>
 
-    <include src="./partials/header-home-page.html"></include>
     <!-- Main part -->
     <main>
-      <include src="./partials/popular-gallery.html"></include>
-      <include src="./partials/search.html"></include>
-      <include src="./partials/card-section.html"></include>
+      <include src="./partials/card-section-library.html"></include>
     </main>
+    <!-- Preloader  -->
+    <include src="./partials/preloader.html"></include>
+    <!-- <include src="./partials/preloader.html"></include> -->
 
-    <!-- Footer -->
+    <!-- Footers -->
     <include src="./partials/footer-all-page.html"></include>
+
+    <script src="https://unpkg.com/webgl-fluid@0.2"></script>
 
     <!-- Modal window  -->
     <include src="./partials/modal-win-our-team.html"></include>
     <include src="./partials/modal-film.html"></include>
-    
 
     <!-- Scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-
-    <!-- Preloader  -->
-    <include src="./partials/preloader.html"></include>
-    
-    <!-- Scripts -->
-
-    <script src="https://unpkg.com/webgl-fluid@0.2"></script>
-    <script src="./libs/swiper/swiper-bundle.min.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./library.js"></script>
   </body>
 </html>
