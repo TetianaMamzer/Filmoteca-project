@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 
   setTimeout(() => {
     document.body.removeChild(document.querySelector('.preloader'));
-  }, 500);
+  }, 200);
 });
 
 //  для іншого прелоадера(на всякий випадок)

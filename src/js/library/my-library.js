@@ -3,7 +3,7 @@ import { fetchMovieInfoAPI } from '../film-api';
 import { isMovieInWatched, isMovieInQueue } from './from-local-storage-info';
 
 const IF_LIBRARY_EMPTY_IMG =
-  '<image class="message-image" src="https://i.imgur.com/Ud8xgso.gif"/>';
+  '<image class="message-image" src="https://i.imgur.com/Ud8xgso.gif" width="150" height"200"/>';
 
 const library = document.querySelector('.library');
 const watchedBtn = document.querySelector('.button-container__watched');
