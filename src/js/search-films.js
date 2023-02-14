@@ -78,12 +78,13 @@ const options = {
 };
 
 const pagination = new Pagination(refs.pagination, options);
-const page = pagination.getCurrentPage();
 
-async function fetchFilmsSearch(page) {
+
+async function fetchFilms() {
+  const page = pagination.getCurrentPage();
   try {
     const response = await fetch(
-      `${URL}/search/movie?api_key=${KEY}&language=en-US&query=${inputOn}&page=${page}&include_adult=folse`
+      `${URL}/search/movie?api_key=${KEY}&language=en-US&query=${inputOn}&page=${page}&include_adult=false`
     );
     if (!response.ok) {
       throw new Error('Network response was not OK');
@@ -145,7 +146,7 @@ function onInput(e) {
   inputOn = inputOn = e.target.elements.searchQuery.value.trim();
 
   fetchGenresAPI().then(genres => {
-    fetchFilmsSearch().then(data => {
+    fetchFilms().then(data => {
       if (data.length === 0 ) {
         return Notiflix.Notify.failure(
           'Search result not successful. Enter the correct movie name and'

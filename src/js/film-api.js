@@ -189,7 +189,7 @@ async function fetchMovieInfoAPI(movie_id) {
 
 async function fetchFilmsSearch(searchQuery, page) {
   return await fetch(
-    `${URL}/search/movie?api_key=${KEY}&language=en-US&query=${searchQuery}&page=${page}&include_adult=folse`
+    `${URL}/search/movie?api_key=${KEY}&language=en-US&query=${searchQuery}&page=${page}&include_adult=false`
   )
     .then(response => {
       if (!response.ok) {
